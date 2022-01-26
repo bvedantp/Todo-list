@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+header {
+    padding: 18px;
+    background-color: rebeccapurple;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; /*to make footer sticky down */
+    background-color: rgba(197, 151, 243, 0.521);
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.proj-list {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2vw;
+    padding: 12px;
+    min-width: 20vw;
+    gap: 10px;
+    background-color: rgba(88, 74, 102, 0.616);
+}
+
+.proj-list button {
+    background-color: rgba(197, 151, 243, 0.521);
+    padding: 12px;
+    border: 3px solid rebeccapurple;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.proj-list h4 {
+    text-align: center;
+    border-bottom: 3px white;
+    border-bottom-width: 1px;
+    border-bottom-style: groove;
+    max-width: 13em;
+    overflow: hidden; /* so overflowed text ... m render ho */
+    text-overflow: ellipsis;
+    padding: 5px;
+}
+
+.all-todos {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    padding-top: 18px;
+    gap: 30px;
+    margin: 5px;
+    min-width: 70vw;
+}
+
+.all-todos h3 {
+    font-size: xx-large;
+    text-shadow: 2px 6px 9px rebeccapurple;
+}
+
+.all-todos h3:after {
+    content: ""; /* This is necessary for the border bottom line to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 16px; /* This creates some space between the element and the border. */
+    border-bottom: 2px solid whitesmoke; /* This creates the border. Replace black with whatever color you want. */
+}
+
+#add-todo {
+    position: fixed;
+    top: 90%;
+    font-size: x-large;
+    font-weight: 600;
+    right: 3%;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(162, 70, 255);
+    border-radius: 50%;
+    border: 1px solid rgb(203, 178, 228);
+    box-shadow: 2px 3px 12px rebeccapurple;
+}
+
+.todos {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 15px;
+    text-shadow: 1px 1px 12px rebeccapurple;
+}
+
+.todos li {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    border: 1px solid grey;
+    padding: 8px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.todos button {
+    display:inline-block;
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+.todos i {
+    margin-left: auto; /*to add icon to very right  |||  float:right is used if no flexbox*/
+}
+
+footer {
+    margin-top: auto; /* to set footer to bottom*/
+    text-align: center;
+    background-color: rgb(61, 49, 73);
+    padding: 6px;
+}
