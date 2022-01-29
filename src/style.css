@@ -1,3 +1,5 @@
+@import url('../node_modules/@fortawesome/fontawesome-free/css/all.min.css'); /*import icons here and not inside html or js files*/
+
 * {
     margin: 0;
     padding: 0;
@@ -128,4 +130,41 @@ footer {
     text-align: center;
     background-color: rgb(61, 49, 73);
     padding: 6px;
+}
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    padding: 35px 65px;
+    border: 5px solid rebeccapurple;
+    border-radius: 8px;
+    background-color: rgba(171, 101, 241, 0.521);
+    box-shadow: 3px 4px 7px black;
+}
+
+#todo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#todo-form label {
+    font-size: large;
+}
+
+#todo-form input {
+    padding: 4px;
+    color: black;
+    background-color: rgba(255, 235, 205, 0.603);
+}
+
+.submit-it {
+    padding: 6px 12px 6px 12px;
+    font-weight: 600;
+    border: 2px solid rebeccapurple;
+    border-radius: 12px;
+    background-color: rgba(102, 51, 153, 0.158);
 }

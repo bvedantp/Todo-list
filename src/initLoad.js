@@ -1,3 +1,5 @@
+import insertFormDom from "./insertFormDom";
+
 const content = document.getElementById('content');
 
 let initLoad = ()=>{
@@ -13,6 +15,7 @@ let initLoad = ()=>{
     let heading = document.createElement('h3');
     heading.innerText = 'Project 1';
     let todoList = document.createElement('ul');
+    todoList.classList.add('todos');
     todoList.innerHTML = `<li><button></button> This is one tododaaadaddddddddd 11/2/22 <i class="far fa-trash-alt"></i></li>
     <li><button></button>This is another todo<i class="far fa-trash-alt"></i></li>`;
     
@@ -29,6 +32,8 @@ let initLoad = ()=>{
 
     allTodos.appendChild(heading);
     allTodos.appendChild(todoList);
+
+    insertFormDom();
 }
 
 export default initLoad;
