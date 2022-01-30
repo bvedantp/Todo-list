@@ -118,11 +118,16 @@ body {
     height: 19px;
     width: 19px;
     border-radius: 50%;
-    border: 1px solid red;
+    border: 1px solid grey;
+    background-color: rgba(119, 110, 110, 0.315);
 }
 
 .todos i {
-    margin-left: auto; /*to add icon to very right  |||  float:right is used if no flexbox*/
+    margin-left: 8px; 
+}
+
+.todos div {
+    margin-left: auto; /*to add icon to very right  |||  float:right is used if no flexbox */
 }
 
 footer {
@@ -167,4 +172,25 @@ footer {
     border: 2px solid rebeccapurple;
     border-radius: 12px;
     background-color: rgba(102, 51, 153, 0.158);
+}
+
+.yellow {
+    border: 1px solid grey;
+    background-color: rgba(119, 110, 110, 0.315);
+}
+
+.red {
+    border: 1px solid red;
+    background-color: rgba(245, 59, 59, 0.452);
+}
+
+.green {
+    border: 1px solid green;
+    background-color: rgba(153, 205, 50, 0.411);
+}
+
+.priority label {
+    margin-left: 12px;
+    font-size: small !important; 
+
 }

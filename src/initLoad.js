@@ -16,8 +16,8 @@ let initLoad = ()=>{
     heading.innerText = 'Project 1';
     let todoList = document.createElement('ul');
     todoList.classList.add('todos');
-    todoList.innerHTML = `<li><button></button> This is one tododaaadaddddddddd 11/2/22 <i class="far fa-trash-alt"></i></li>
-    <li><button></button>This is another todo<i class="far fa-trash-alt"></i></li>`;
+    todoList.innerHTML = `<li><button></button> This is one tododaaadaddddddddd <div>2022-01-07</div> <i class="far fa-trash-alt"></i><p hidden>This is hide</p></li>
+    <li><button></button>This is another todo <div></div> <i class="far fa-trash-alt"></i></li>`;
     
     let addTodo = document.createElement('button');
     addTodo.id = "add-todo";

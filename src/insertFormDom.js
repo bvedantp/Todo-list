@@ -53,6 +53,8 @@ priority.classList.add('priority');
 priority.innerHTML = `<input type="radio" name="priority_input" value="high" id="hi">
 <input type="radio" name="priority_input" value="medium" id="med">
 <input type="radio" name="priority_input" value="low" id="lo" checked>`;
+let priorLabel = document.createElement('label');
+priorLabel.textContent = `low`;
 
 let submit = document.createElement('button');
 submit.classList.add('submit-it');
@@ -64,7 +66,18 @@ form.appendChild(title);
 form.appendChild(desc);
 form.appendChild(date);
 form.appendChild(priority);
+priority.appendChild(priorLabel);
 form.appendChild(submit);
+
+priority.addEventListener('click',(e)=>{
+    let value = e.target.value;
+    //console.log(typeof(value))
+    if(!value){//to catch undefined values
+        //priorLabel.textContent = ` `; 
+    } else {
+        priorLabel.textContent = `${value}`;
+    }
+})
 };
 
 export default insertFormDom;
