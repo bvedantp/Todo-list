@@ -1,4 +1,4 @@
-import insertFormDom from "./insertFormDom";
+import {insertFormDom} from "./insertFormDom";
 
 const content = document.getElementById('content');
 

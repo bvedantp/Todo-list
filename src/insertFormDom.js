@@ -80,4 +80,4 @@ priority.addEventListener('click',(e)=>{
 })
 };
 
-export default insertFormDom;
+export {insertFormDom};

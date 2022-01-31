@@ -2,7 +2,7 @@
 import {todos} from "./index"; //so I can have the same functionality as the above line
 function insertTodoDom(todo){
     //    console.log(todo.title)
-    console.log(todos);
+   // console.log(todos);
     let newList = document.createElement('li');
     let button = document.createElement('button');
     let date = document.createElement('div');
