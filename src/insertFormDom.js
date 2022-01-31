@@ -54,6 +54,7 @@ priority.innerHTML = `<input type="radio" name="priority_input" value="high" id=
 <input type="radio" name="priority_input" value="medium" id="med">
 <input type="radio" name="priority_input" value="low" id="lo" checked>`;
 let priorLabel = document.createElement('label');
+priorLabel.id = "priorLabel";
 priorLabel.textContent = `low`;
 
 let submit = document.createElement('button');

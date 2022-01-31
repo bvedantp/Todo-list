@@ -39,6 +39,8 @@ todoForm.addEventListener('submit',(e)=>{
    // console.log(allProj[`${activeProj}`]);
     insertTodoDom(todo);
     modal.style.display = 'none';
+    let priorLabel = document.getElementById('priorLabel');
+    priorLabel.textContent = `low`;
     todoForm.reset();
 })
 
