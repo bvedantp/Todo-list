@@ -97,5 +97,33 @@ projList.addEventListener('click',(e)=>{
 //add function to create new array when add project is clicked with custom name
 //on click project1 or .. populate dom with that array
 
-const todos = document.getElementsByClassName('todos')[0]; //both lines are hack so I can select and append DOM 'ul'
+//let deleteIcon = document.querySelector('i');
+const todos = document.getElementsByClassName('todos')[0]; //both lines(this and below export) are hack so I can select and append DOM 'ul'
+
+todos.addEventListener('click',(e)=>{ //this is called EVENT DELEGATION
+    if(e.target.nodeName == 'I'){     //meaning use bubbling to target the parent element 
+        //console.log('works');      //and attach event to the actual targeted child(which is dynamically generated and so can't be selected)
+        let currProj = document.querySelector('.all-todos h3').innerText;
+        let targetTitle = e.target.closest('li').innerText.split('\n')[0]; //closest finds the parent and split splits on line break
+        let currArray = allProj[currProj];
+        for(let i=0;i<currArray.length;i++){
+            let deleteNode = allProj[currProj][i].title;
+            if(deleteNode == `${targetTitle}`){
+                //console.log(deleteNode);
+                currArray.splice(i,1);
+                e.target.closest('li').remove();
+            } 
+        }
+        // let deleteNode = allProj[currProj][i].find(`${targetTitle}`);
+        
+    }
+})
+
+//onto delete operation
+//first h3 e.target value lo for actuveProj
+//then title value of icon jha delete dabaya h
+//array.find in that allProj[activeProj] m that value
+//jo return hui delete it
+
+
 export {todos};
