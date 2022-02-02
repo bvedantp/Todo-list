@@ -14,6 +14,8 @@ const addTodo = document.getElementById('add-todo');
 let activeProj = `Project 1`; //replace projName with this bcoz this is grobal and accesible to all
 allProj[activeProj] = []; //initialise default array to store todos
 
+
+
 addTodo.addEventListener('click', ()=>{
     //insertTodoDom();
     modal.style.display = 'flex';
@@ -116,14 +118,17 @@ todos.addEventListener('click',(e)=>{ //this is called EVENT DELEGATION
         }
         // let deleteNode = allProj[currProj][i].find(`${targetTitle}`);
         
-    }
-})
-
 //onto delete operation
 //first h3 e.target value lo for actuveProj
 //then title value of icon jha delete dabaya h
 //array.find in that allProj[activeProj] m that value
-//jo return hui delete it
+//jo return hui delete it        
+    }
+})
 
+//add webstorage 
+//all data toh pele s hi aa gya h, so now just create 2 functions
+//one will populate/create DOM of all projets
+//another will insert todo dom to each proj
 
 export {todos};
